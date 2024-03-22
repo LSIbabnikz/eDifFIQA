@@ -1,0 +1,57 @@
+
+base:
+  epochs: 3
+  verbose: 1
+  save_path: "./weights"
+  seed: 42069
+  device: "cuda:0"
+  model: "./configs/ediffiqaL_config.yaml"
+  amp: 1
+
+dataset:
+  val_split: 0.1
+  image_loc: "TODO"
+  model_name: "ediffiqa"
+  backbone_model: "cosface"
+
+dataloader:
+  train:
+    params:
+      batch_size: 128
+      shuffle: 1
+      pin_memory: 1
+      num_workers: 10
+  val:
+    params:
+      batch_size: 128
+      pin_memory: 1
+      num_workers: 10
+
+optimizer:
+  module: "torch.optim.Adam"
+  group_1:
+    params: "mlp"
+    lr: 1.0e-3
+  group_2:
+    params: "base_model"
+    lr: 1.0e-4
+    limit: 100
+
+loss:
+  quality: 
+    module: "loss.ExtendedL1"
+    params:
+      base_loss: 
+        module: "torch.nn.L1Loss"
+      epsilon: 0.5
+  consistency:
+    module: "torch.nn.CosineEmbeddingLoss"
+    params:
+      reduction: "none"
+  theta: 0.5
+  epsilon: 0.5
+
+wandb:
+  use: 0
+  project: "ediffiqa"
+

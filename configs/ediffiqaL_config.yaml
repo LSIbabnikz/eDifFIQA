@@ -1,0 +1,28 @@
+
+base_model:
+  module: "model.iresnet.iresnet100"
+  weights: "./weights/r100.pth"
+  transformations:
+    trans_1:
+      module: "torchvision.transforms.Resize"
+      params:
+        size: [112, 112]
+    trans_2:
+      module: "torchvision.transforms.ToTensor"
+    trans_3:
+      module: "torchvision.transforms.Normalize"
+      params: 
+        mean: [.5, .5, .5]
+        std: [.5, .5, .5]
+
+mlp:
+  module: "model.mlp.MLP"
+  params:
+      in_dim: 512
+      hidden_dim: 1024
+      out_dim: 1
+
+ediffiqa:
+  module: "model.ediffiqa.eDifFIQA"
+  params:
+    return_feat: 0

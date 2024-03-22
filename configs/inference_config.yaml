@@ -1,0 +1,16 @@
+
+base:
+  verbose: 1
+  save_path: "."
+  seed: 42069
+  device: "cuda:0"
+
+dataset:
+  loc: "./example_images"
+
+dataloader:
+  params:
+    batch_size: 128
+
+model: "ediffiqaL"
+
