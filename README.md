@@ -2,6 +2,17 @@
 
 This is the official repository of "eDifFIQA: Towards Efficient Face Image Quality Assessment based on Denoising Diffusion Probabilistic Models" accepted in IEEE TBIOM (Transactions on Biometrics, Behavior, and Identity Science) available [here](https://ieeexplore.ieee.org/document/10468647).
 
+---
+
+
+:hourglass: __eDifFIQA(L) has been submitted to the [NIST FATE-Quality track](https://pages.nist.gov/frvt/html/frvt_quality.html). Awaiting publication of results.__
+
+:bulb: __eDifFIQA(T) a lightweight (tiny) model has been added to the [OpenCV Model ZOO repository](https://github.com/opencv/opencv_zoo).__
+
+:bulb: __All models have been made available on [HuggingFace](https://huggingface.co/LSIbabnikz).__
+
+
+
 ## __Table of Contents__
 
   - [**1.Overview**](#1-overview)
