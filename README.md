@@ -4,8 +4,9 @@ This is the official repository of "eDifFIQA: Towards Efficient Face Image Quali
 
 ---
 
+:bulb: __eDifFIQA(T) has been added to the models available in this repository.__
 
-:hourglass: __eDifFIQA(L) has been submitted to the [NIST FATE-Quality track](https://pages.nist.gov/frvt/html/frvt_quality.html). Awaiting publication of results.__
+:bulb: __eDifFIQA(L) has been added to the [NIST FATE-Quality track](https://pages.nist.gov/frvt/html/frvt_quality.html)__
 
 :bulb: __eDifFIQA(T) a lightweight (tiny) model has been added to the [OpenCV Model ZOO repository](https://github.com/opencv/opencv_zoo).__
 

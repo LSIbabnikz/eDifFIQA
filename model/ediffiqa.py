@@ -4,7 +4,8 @@ import torch
 
 EDIFFIQA_CONF = {"ediffiqaL": ("./configs/ediffiqaL_config.yaml", "./weights/ediffiqaL.pth"), 
                  "ediffiqaM": ("./configs/ediffiqaM_config.yaml", "./weights/ediffiqaM.pth"),
-                 "ediffiqaS": ("./configs/ediffiqaS_config.yaml", "./weights/ediffiqaS.pth")}
+                 "ediffiqaS": ("./configs/ediffiqaS_config.yaml", "./weights/ediffiqaS.pth"),
+                 "ediffiqaT": ("./configs/ediffiqaT_config.yaml", "./weights/ediffiqaT.pth")}
 
 class eDifFIQA(torch.nn.Module):
     """ eDifFIQA model consisting of a pretrained FR backbone (CosFace in the original implementation) and a quality regression MLP head.
